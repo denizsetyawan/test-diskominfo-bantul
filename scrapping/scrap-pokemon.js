@@ -56,7 +56,7 @@ async function scrapePokemon() {
         await sequelize.sync({ force: true });
         console.log("masuk");
 
-        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=20');
+        const response = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=400');
         const pokemonList = response.data.results;
 
         for (let p of pokemonList) {
