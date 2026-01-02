@@ -19,7 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/pokemons', [PokemonController::class, 'index'])->name('pokemons.index');
-Route::get('/pokemons/{id}', [PokemonController::class, 'show'])->name('pokemons.show');
-Route::post('/pokemons', [PokemonController::class, 'store'])->name('pokemons.store');
-Route::put('/pokemons/{id}', [PokemonController::class, 'update'])->name('pokemons.update');
-Route::delete('/pokemons/{id}', [PokemonController::class, 'destroy'])->name('pokemons.destroy');
+Route::get('/pokemons/{search}', [PokemonController::class, 'search'])->name('pokemons.search');
