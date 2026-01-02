@@ -10,6 +10,6 @@ class Pokemon extends Model
 
     public function abilities()
     {
-        return $this->hasMany(PokemonAbility::class);
+        return $this->belongsToMany(Ability::class,'pokemon_ability','pokemon_id','abilities_id');
     }
 }

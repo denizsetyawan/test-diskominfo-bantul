@@ -49,7 +49,7 @@
                     <td>
                         <ul>
                             @foreach ($pokemon->abilities as $ability)
-                            <li>{{ $ability->ability_name }}</li>
+                            <li>{{ $ability->name }}</li>
                             @endforeach
                         </ul>
                     </td>

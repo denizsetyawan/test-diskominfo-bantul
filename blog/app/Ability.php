@@ -8,8 +8,8 @@ class Ability extends Model
 {
     protected $table = 'abilities';
 
-    public function pokemonAbilities()
+    public function pokemons()
     {
-        return $this->hasMany(PokemonAbility::class, 'ability_id');
+        return $this->belongsToMany(Pokemon::class,'pokemon_ability','abilities_id','pokemon_id');
     }
 }
